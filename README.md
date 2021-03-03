@@ -1,6 +1,6 @@
-## SP-CourseProject
+# SP-CourseProject
 
-# Rodrigo De Lama, Manuel Morales & Jaime Mato
+## Rodrigo De Lama, Manuel Morales & Jaime Mato
 
 Systems Programming Course Project.
 
