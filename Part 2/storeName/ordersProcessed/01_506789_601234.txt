@@ -1,0 +1,2 @@
+13|name-SP13|brand-13|f|true|kg|1|52.0|62.0|23456|name-Prv13|taxAddress-13|704567|first-C13|last-C13|C13@xxxx.com
+15|name-SP15|brand-15|f|true|kg|3|45.0|55.0|25678|name-Prv15|taxAddress-15|704567|first-C15|last-C15|C15@xxxx.com

@@ -1,0 +1,2 @@
+12|name-SP12|brand-12|f|true|kg|15|96.0|106.0|22345|name-Prv12|taxAddress-12|704567|first-C12|last-C12|C12@xxxx.com
+14|name-SP14|brand-14|f|true|kg|1|12.0|22.0|24567|name-Prv14|taxAddress-14|704567|first-C14|last-C14|C14@xxxx.com

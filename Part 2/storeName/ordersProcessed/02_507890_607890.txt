@@ -1,0 +1,5 @@
+16|name-SP16|brand-16|f|true|kg|2|23.0|33.0|26789|name-Prv16|taxAddress-16|704567|first-C16|last-C16|C16@xxxx.com
+17|name-SP17|brand-17|f|true|kg|2|78.0|88.0|27890|name-Prv17|taxAddress-17|704567|first-C17|last-C17|C17@xxxx.com
+18|name-SP18|brand-18|f|true|kg|3|98.0|108.0|28901|name-Prv18|taxAddress-18|704567|first-C18|last-C18|C18@xxxx.com
+19|name-SP19|brand-19|f|true|kg|1|57.0|67.0|29012|name-Prv19|taxAddress-19|704567|first-C19|last-C19|C19@xxxx.com
+20|name-SP20|brand-20|f|true|kg|1|45.0|55.0|20123|name-Prv20|taxAddress-20|704567|first-C20|last-C20|C20@xxxx.com
