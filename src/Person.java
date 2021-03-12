@@ -1,12 +1,20 @@
 import java.util.Scanner;
 import java.io.*;
 
+//Systems Programming Course Project
+//Rodrigo De Lama - 100451775@alumnos.uc3m.es - @RDLF11
+//Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
+//Manuel Morales - 100451690@alumnos.uc3m.es - @ikaoseu
+
 public class Person {
+
+    //Person Attributes
     private int id;
     private String firstName;
     private String lastName;
     private String email;
 
+    //Person Constructor
     public Person(int id, String firstName, String lastName, String email) {
         try {
             setId(id);
@@ -19,6 +27,7 @@ public class Person {
         }
     }
 
+    //Methods
     public Person() {
         this(0000, "Not defined", "Not defined", "xxxx@xxxx.com");
     }
@@ -27,10 +36,11 @@ public class Person {
         readFromFile(file);
     }
 
+    //Getters return private variables on demand
     public int getId() {
         return id;
     }
-
+    
     public String getFirstName() {
         return firstName;
     }
@@ -43,6 +53,7 @@ public class Person {
         return email;
     }
 
+    //Setters
     public void setFirstName(String firstName) throws PersonException {
         if (firstName.length() > 15) {
             throw new PersonException(

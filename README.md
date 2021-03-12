@@ -4,4 +4,4 @@
 
 Systems Programming Course Project.
 
-Second semester of Telematics and Mobile and Space Communication at uc3m
+Second semester of Telematics and Mobile and Space Communications at uc3m
