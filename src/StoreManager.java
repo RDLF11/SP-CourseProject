@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class StoreManager {
 
     //StoreManager Attributes
-    private String name; //name of our store
+    private String name; //name of the store
     private double stockCost;
     private double stockBenefit;
 
