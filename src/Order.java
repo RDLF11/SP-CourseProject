@@ -9,6 +9,8 @@ public class Order extends ProductList {
 
     //Order Attributes
     private int orderID;
+    private String client;
+    private String employee;
 
     //Order Constructor
     public Order() {
@@ -17,6 +19,7 @@ public class Order extends ProductList {
         //super(list, getTotalCost(), getTotalPrice(), getTotalBenefit());
 
         super(list, totalCost, totalPrice, totalBenefit);
+        
     }
 
 }

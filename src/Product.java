@@ -9,9 +9,13 @@ public class Product {
     private String name;
     private String brand;
 
-    //we need to create 4 final char categories:
-        //f: Food, s: Supplies, e: Equipment & m: Miscellany
+
     private char category;
+        //we need 4 final char categories:
+        static final char Food = 'f';
+        static final char Supplies = 's';
+        static final char Equipment = 'e';
+        static final char Miscellany = 'm';
 
     private boolean isCountable;
     private String measurementUnit; //kg, litres, pieces...

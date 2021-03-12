@@ -8,14 +8,18 @@ import java.util.ArrayList;
 public class StoreManager {
 
     //StoreManager Attributes
-    private String name;
+    private String name; //name of our store
     private double stockCost;
     private double stockBenefit;
 
     private ArrayList <ProductList> stock;
 
     //Constructor
-        //For the time being we will use the default class constructor
+    public StoreManager() {
+
+        stock = new ArrayList<ProductList>(); //Initialize ArrayList inside the constructor
+
+    }
 
     //Methods
 
