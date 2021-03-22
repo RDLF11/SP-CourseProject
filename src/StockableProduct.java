@@ -16,11 +16,6 @@ public class StockableProduct extends Product {
         private double costPerUnit;
         private double pricePerUnit;
 
-        ArrayList <StockableProduct> list;
-        //We will store totalCost, totalPrice and totalBenefit in this ArrayList
-            //All these values take into account not only the different products on the
-            //list but also the number of units available for each of them
-
     //Constructor
         //For the time being we will use the default class constructor
     public StockableProduct() {
@@ -28,11 +23,6 @@ public class StockableProduct extends Product {
         ID_counter++;
         this.productID = ID_counter;
 
-        //Initialize ProductList ArrayList here
-        list = new ArrayList<StockableProduct>();
-            // ???????
-            //MAYBE we need to initialize this ArrayList in ProductList.java
-            //Potential error of duplicate name "list" if declared in ProductList class
     }
 
     //Methods

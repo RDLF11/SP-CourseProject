@@ -24,6 +24,8 @@ public class RunApp {
         clear();
         
         System.out.println("\t\t\t\t - Main Menu - ");
+        System.out.println("Store info: Store Name: " + getStoreName() +
+                           "Store cost: " + getStoreCost());     
 
     }
     

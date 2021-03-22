@@ -21,9 +21,9 @@ public class Person {
             setFirstName(firstName);
             setLastName(lastName);
             setEmail(email);
-        } catch (PersonException pe) {
+        } catch (PersonException pe) { //pe is Person
             pe.printStackTrace();
-            System.exit(1);
+            System.exit(1); //System code exit 1
         }
     }
 

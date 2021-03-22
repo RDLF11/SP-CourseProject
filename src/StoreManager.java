@@ -16,11 +16,11 @@ public class StoreManager {
 
     //Constructor
     public StoreManager() {
-
-        stock = new ArrayList<ProductList>(); //Initialize ArrayList inside the constructor
-
     }
 
     //Methods
+    public String getStoreName() {
+        return name;
+    }
 
 }

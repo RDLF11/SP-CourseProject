@@ -9,8 +9,9 @@ public class Order extends ProductList {
 
     //Order Attributes
     private int orderID;
-    private String client;
-    private String employee;
+    //clients and employees should be objects of class Person
+    private Person client;
+    private Person employee;
 
     //Order Constructor
     public Order() {

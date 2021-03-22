@@ -9,7 +9,7 @@ public class Provider {
     private int vat;
     private String name;
     private String taxAddress;
-    private String contactPerson;
+    private Person contactPerson; //contact person should be a person
 
     //Constructor
         //For the time being we will use the default class constructor

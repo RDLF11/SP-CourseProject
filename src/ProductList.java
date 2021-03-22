@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //Systems Programming Course Project
 //Rodrigo De Lama - 100451775@alumnos.uc3m.es - @RDLF11
 //Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
@@ -7,18 +9,18 @@ public class ProductList {
 
     //ProductList Attributes
     //declare static and friendly for Order.java cosntructor to be able to utilise them
-    static String list;
+    static ArrayList<StockableProduct> list = new ArrayList<StockableProduct>(); //changed list from string to ArrayList
     static double totalCost;
     static double totalPrice;
     static double totalBenefit;
 
     //to be able to inherit attributes we need an initial constructor
-    public ProductList(String list, double totalCost, double totalPrice, double totalBenefit) {
+    public ProductList(ArrayList<StockableProduct> list, double totalCost, double totalPrice, double totalBenefit) {
     }
 
     //Getters for initial test of Order constructor
     //Cannot use getters in a subclass constructor method
-    public String getList() {
+    public ArrayList<StockableProduct> getList() {
         return list;
     }
 
@@ -35,7 +37,7 @@ public class ProductList {
     }
 
     //Setters - to be potentially used in Order.java
-    public void setList(String list) {
+    public void setList(ArrayList<StockableProduct> list) {
         ProductList.list = list; //since they are static, we must access them differently
     }
 
