@@ -24,12 +24,31 @@ public class StockableProduct extends Product {
         this.productID = productID_counter;
 
     }
+    //Variable Constructor 
 
-    public void prueba(){
-        
+    public StockableProduct(int numUnits,double costPerUnit, double pricePerUnit){
+        this.numUnits = numUnits;
+        this.costPerUnit = costPerUnit;
+        this.pricePerUnit = pricePerUnit;
     }
 
-
     //Methods
+    //Getters
+    public int productID(){
+        return productID;
+    }
+
+    //Setters
+    public void setnumUnits(int numUnits){
+        this.numUnits = numUnits;
+    }
+
+    public void costPerUnit(double costPerUnit){
+        this.costPerUnit = costPerUnit;
+    }
+
+    public void pricePerUnit(double pricePerUnit){
+        this.pricePerUnit = pricePerUnit;
+    }
 
 }
