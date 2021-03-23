@@ -14,6 +14,9 @@ public class ProductList {
     static double totalPrice;
     static double totalBenefit;
 
+    //Constructors
+    public ProductList() {
+    }
     //to be able to inherit attributes we need an initial constructor
     public ProductList(ArrayList<StockableProduct> list, double totalCost, double totalPrice, double totalBenefit) {
     }

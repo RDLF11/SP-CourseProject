@@ -24,9 +24,9 @@ public abstract class RunApp {
         clear();
         
         System.out.println("\t\t\t\t - Main Menu - ");
-        System.out.println( "Store info: Store Name: " + getStoreName() +
-                            "Store cost: " + getProductCost() + 
-                            "Stock benefit: " + getProductBenefit());
+        System.out.println("Store info: Store Name: " + getStoreName() +
+                           "Store cost: " + getProductCost() + 
+                           "Stock benefit: " + getProductBenefit());
 
         System.out.println("1 - Create Store\n" +
                            "2 - Manage Stock\n" +
@@ -38,7 +38,7 @@ public abstract class RunApp {
                            "8 - Print Store Info\n" +
                            "9 - Testing\n" +
                            "0 - Exit the application");
-                           
+
         System.out.println("Option>");
     }
     

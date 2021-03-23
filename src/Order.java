@@ -14,7 +14,7 @@ public class Order extends ProductList {
     private Person client;
     private Person employee;
 
-    //Order Constructor
+    //Order Constructors
     public Order() {
         //Cannot use getters on a super attribute inheritance
         //super(list, getTotalCost(), getTotalPrice(), getTotalBenefit());

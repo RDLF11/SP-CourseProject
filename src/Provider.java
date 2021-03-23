@@ -13,6 +13,15 @@ public class Provider {
 
     //Constructor
         //For the time being we will use the default class constructor
+    public Provider() {
+        //TODO: stuff by default
+    }
+    public Provider(int vat, String name, String taxAddress, Person contactPerson) {
+        this.vat = vat;
+        this.name = name;
+        this.taxAddress = taxAddress;
+        this.contactPerson = contactPerson;
+    }
 
     //Methods
     
