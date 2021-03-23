@@ -10,7 +10,7 @@ public class StockableProduct extends Product {
     //StockableProduct Attributes
         //We must inherit all previous attributes
         private int productID;
-        private static int ID_counter; //auxiliary value, to make sure each newly stocked product gets a unique ID
+        private static int productID_counter; //auxiliary value, to make sure each newly stocked product gets a unique ID
 
         private int numUnits;
         private double costPerUnit;
@@ -20,8 +20,8 @@ public class StockableProduct extends Product {
         //For the time being we will use the default class constructor
     public StockableProduct() {
 
-        ID_counter++;
-        this.productID = ID_counter;
+        productID_counter++;
+        this.productID = productID_counter;
 
     }
 

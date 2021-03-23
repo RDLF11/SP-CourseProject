@@ -11,7 +11,7 @@ public class PersonException extends Exception {
     //PersonException Constructor required by various Person.java methods
     public PersonException(String string) {
 
-        System.err.println("Error");
+        System.err.println("Error: PersonException has been thrown");
     }
 
 }

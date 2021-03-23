@@ -3,7 +3,7 @@
 //Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
 //Manuel Morales - 100451690@alumnos.uc3m.es - @ikaoseu
 
-public class RunApp {
+public abstract class RunApp {
     
     //Clear console
     public static void clear() {
@@ -24,8 +24,8 @@ public class RunApp {
         clear();
         
         System.out.println("\t\t\t\t - Main Menu - ");
-        System.out.println("Store info: Store Name: " + getStoreName() +
-                           "Store cost: " + getStoreCost());     
+        System.out.println( "Store info: Store Name: " + getStoreName() +
+                            "Store cost: " + getStoreCost() );     
 
     }
     

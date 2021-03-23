@@ -9,18 +9,22 @@ public class Order extends ProductList {
 
     //Order Attributes
     private int orderID;
+    private static int orderID_counter; //aux value
     //clients and employees should be objects of class Person
     private Person client;
     private Person employee;
 
     //Order Constructor
     public Order() {
-
         //Cannot use getters on a super attribute inheritance
         //super(list, getTotalCost(), getTotalPrice(), getTotalBenefit());
 
         super(list, totalCost, totalPrice, totalBenefit);
-        
+
+        //increment the order id counter
+        orderID_counter++;
+        this.orderID = orderID_counter;
+
     }
 
 }
