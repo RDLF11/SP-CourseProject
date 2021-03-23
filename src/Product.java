@@ -6,8 +6,8 @@
 public class Product {
     
     //Product Attributes
-    private String name;
-    private String brand;
+    private String productName;
+    private String productBrand;
 
 
     private char category;
@@ -22,7 +22,35 @@ public class Product {
 
     //Constructor
         //For the time being we will use the default class constructor
+    public Product() {
 
-    //Methods
+    }
+
+    public Product(String productName, String productBrand) {
+        setProductName(productName);
+        setProductBrand(productBrand);
+    }
+
+    //Methods - Getters and Setters
+    //Getters
+    public char getCategory() {
+        return category;
+    }
+    public String getProductName() {
+        return productName;
+    }
+    public String getProductBrand() {
+        return productBrand;
+    }
+    //Setters
+    public void setCategory(char category) {
+        this.category = category;
+    }
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+    public void setProductBrand(String productBrand) {
+        this.productBrand = productBrand;
+    }
 
 }
