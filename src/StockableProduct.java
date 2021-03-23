@@ -34,11 +34,13 @@ public class StockableProduct extends Product {
 
     //Methods
     //Getters
+        //since we might need this ID later to either locate it or modify it.
     public int productID(){
         return productID;
     }
 
     //Setters
+        //we create a set() method for this 3 variables since theres a empty constructor.
     public void setnumUnits(int numUnits){
         this.numUnits = numUnits;
     }
