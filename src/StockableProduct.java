@@ -27,9 +27,9 @@ public class StockableProduct extends Product {
     //Variable Constructor 
 
     public StockableProduct(int numUnits,double costPerUnit, double pricePerUnit){
-        this.numUnits = numUnits;
-        this.costPerUnit = costPerUnit;
-        this.pricePerUnit = pricePerUnit;
+        setnumUnits(numUnits);
+        setcostPerUnit(costPerUnit);
+        setpricePerUnit(pricePerUnit);
     }
 
     //Methods
@@ -45,11 +45,11 @@ public class StockableProduct extends Product {
         this.numUnits = numUnits;
     }
 
-    public void costPerUnit(double costPerUnit){
+    public void setcostPerUnit(double costPerUnit){
         this.costPerUnit = costPerUnit;
     }
 
-    public void pricePerUnit(double pricePerUnit){
+    public void setpricePerUnit(double pricePerUnit){
         this.pricePerUnit = pricePerUnit;
     }
 

@@ -15,10 +15,12 @@ public class StoreManager {
     //we should consider if this ArrayList is necessary
     private ArrayList <ProductList> stock;
 
-    //Constructor
+    //Empty constructor
     public StoreManager() {
-
+        
     }
+
+    //Non empty consctrutor
     public StoreManager(String storeName, double stockCost, double stockBenefit) {
         setStoreName(storeName);
         setStockCost(stockCost);
