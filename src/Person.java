@@ -93,6 +93,7 @@ public class Person {
         }
     }
 
+    //Person toString method
     public String toString() {
         return id + "|" + firstName + "|" + lastName + "|" + email + "\n";
     }
