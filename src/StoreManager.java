@@ -8,19 +8,43 @@ import java.util.ArrayList;
 public class StoreManager {
 
     //StoreManager Attributes
-    private String name; //name of the store
+    private String storeName; //name of the store
     private double stockCost;
     private double stockBenefit;
 
+    //we should consider if this ArrayList is necessary
     private ArrayList <ProductList> stock;
 
     //Constructor
     public StoreManager() {
+
+    }
+    public StoreManager(String storeName, double stockCost, double stockBenefit) {
+        setStoreName(storeName);
+        setStockCost(stockCost);
+        setStockBenefit(stockBenefit);
     }
 
-    //Methods
+    //Methods - Getters and Setters
+    //Getters
     public String getStoreName() {
-        return name;
+        return storeName;
+    }
+    public double getStockCost() {
+        return stockCost;
+    }
+    public double getStockBenefit() {
+        return stockBenefit;
+    }
+    //Setters
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
+    }
+    public void setStockCost(double stockCost) {
+        this.stockCost = stockCost;
+    }
+    public void setStockBenefit(double stockBenefit) {
+        this.stockBenefit = stockBenefit;
     }
 
 }

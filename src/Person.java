@@ -27,7 +27,6 @@ public class Person {
         }
     }
 
-    //Methods
     public Person() {
         this(0000, "Not defined", "Not defined", "xxxx@xxxx.com");
     }
@@ -35,7 +34,8 @@ public class Person {
     public Person(String file) {
         readFromFile(file);
     }
-
+    
+    //Methods
     //Getters return private variables on demand
     public int getId() {
         return id;

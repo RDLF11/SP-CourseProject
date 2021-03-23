@@ -18,7 +18,6 @@ public class Order extends ProductList {
     public Order() {
         //Cannot use getters on a super attribute inheritance
         //super(list, getTotalCost(), getTotalPrice(), getTotalBenefit());
-
         super(list, totalCost, totalPrice, totalBenefit);
 
         //Always increment the orderID counter
