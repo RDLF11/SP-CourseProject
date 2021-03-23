@@ -26,5 +26,26 @@ public class Order extends ProductList {
         this.orderID = orderID_counter;
 
     }
+    public Order(Person client, Person employee) {
+        setEmployee(employee);
+        setClient(client);
+    }
+
+    //Methods - Getters and Setters
+    //Getters
+    public Person getClient() {
+        return client;
+    }
+    public Person getEmployee() {
+        return employee;
+    }
+    //Setters
+    public void setClient(Person client) {
+        this.client = client;
+    }
+    public void setEmployee(Person employee) {
+        this.employee = employee;
+    }
+
 
 }

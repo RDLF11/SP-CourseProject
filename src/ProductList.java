@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class ProductList {
 
     //ProductList Attributes
-    //declare static and friendly for Order.java cosntructor to be able to utilise them
+    //declare static and friendly for Order.java constructor to be able to utilise them
     static ArrayList<StockableProduct> list = new ArrayList<StockableProduct>(); //changed list from string to ArrayList
     static double totalCost;
     static double totalPrice;
