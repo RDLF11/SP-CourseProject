@@ -6,8 +6,8 @@
 public class Provider {
 
     //Provider Attributes
-    private int vat;
-    private String name;
+    private int VAT;
+    private String providerName;
     private String taxAddress;
     private Person contactPerson; //contact person should be a person
 
@@ -16,13 +16,40 @@ public class Provider {
     public Provider() {
         //TODO: stuff by default
     }
-    public Provider(int vat, String name, String taxAddress, Person contactPerson) {
-        this.vat = vat;
-        this.name = name;
-        this.taxAddress = taxAddress;
-        this.contactPerson = contactPerson;
+    public Provider(int VAT, String providerName, String taxAddress, Person contactPerson) {
+        //Deprecated this. assignments for setters
+        setVAT(VAT);
+        setProviderName(providerName);
+        setTaxAddress(taxAddress);
+        setContactPerson(contactPerson);
     }
 
-    //Methods
+    //Methods - Getters and Setters
+    //Getters
+    public int getVAT() {
+        return VAT;
+    }
+    public String getProviderName() {
+        return providerName;
+    }
+    public String getTaxAddress() {
+        return taxAddress;
+    }
+    public Person getContactPerson() {
+        return contactPerson;
+    }
+    //Setters
+    public void setVAT(int VAT) {
+        this.VAT = VAT;
+    }
+    public void setProviderName(String providerName) {
+        this.providerName = providerName;
+    }
+    public void setTaxAddress(String taxAddress) {
+        this.taxAddress = taxAddress;
+    }
+    public void setContactPerson(Person contactPerson) {
+        this.contactPerson = contactPerson;
+    }    
     
 }
