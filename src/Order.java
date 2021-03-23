@@ -21,18 +21,26 @@ public class Order extends ProductList {
 
         super(list, totalCost, totalPrice, totalBenefit);
 
-        //increment the order id counter
+        //Always increment the orderID counter
         orderID_counter++;
         this.orderID = orderID_counter;
 
     }
     public Order(Person client, Person employee) {
+        
+        //All orderIDs must be tracked
+        orderID_counter++;
+        this.orderID = orderID_counter;
+
         setEmployee(employee);
         setClient(client);
     }
 
     //Methods - Getters and Setters
     //Getters
+    public int getOrderID() {
+        return orderID;
+    }
     public Person getClient() {
         return client;
     }
