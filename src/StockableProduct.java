@@ -25,6 +25,11 @@ public class StockableProduct extends Product {
 
     }
 
+    public void prueba(){
+        
+    }
+
+
     //Methods
 
 }
