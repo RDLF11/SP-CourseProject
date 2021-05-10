@@ -1,3 +1,5 @@
+package store;
+
 //Systems Programming Course Project
 //Rodrigo De Lama - 100451775@alumnos.uc3m.es - @RDLF11
 //Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
