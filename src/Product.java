@@ -43,14 +43,26 @@ public class Product {
         return productBrand;
     }
     //Setters
-    public void setCategory(char category) {
-        this.category = category;
-    }
+
     public void setProductName(String productName) {
         this.productName = productName;
     }
     public void setProductBrand(String productBrand) {
         this.productBrand = productBrand;
+    }
+    public void setCategory(char category) {
+        this.category = category;
+    }
+    //set method
+    public void set(String[] productData) {
+        try {
+            setProductName(productData[0]);
+            setProductBrand(productData[1]);
+            //setCategory(.valueOf(productData[2])); turn string to char
+        } catch (ProductException pe) {
+            pe.printStackTrace();
+            System.exit(1);
+        }
     }
 
 }

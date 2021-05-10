@@ -9,9 +9,9 @@ public class PersonException extends Exception {
     private static final long serialVersionUID = 1L;
 
     //PersonException Constructor required by various Person.java methods
-    public PersonException(String string) {
+    public PersonException(String errorMsg) {
 
-        System.err.println("Error: PersonException has been thrown");
+        System.err.println(errorMsg);
     }
 
 }

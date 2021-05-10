@@ -22,7 +22,7 @@ public class Person {
             setLastName(lastName);
             setEmail(email);
         } catch (PersonException pe) { //pe is Person
-            pe.printStackTrace();
+            pe.printStackTrace(); //Prints this throwable and its backtrace to the standard error stream
             System.exit(1); //System code exit 1
         }
     }
@@ -56,8 +56,7 @@ public class Person {
     //Setters
     public void setFirstName(String firstName) throws PersonException {
         if (firstName.length() > 15) {
-            throw new PersonException(
-                    "The first name must have a maximum of 15 characters");
+            throw new PersonException("The first name must have a maximum of 15 characters");
         } else {
             this.firstName = firstName;
         }
@@ -65,8 +64,7 @@ public class Person {
 
     public void setLastName(String lastName) throws PersonException {
         if (lastName.length() > 15) {
-            throw new PersonException(
-                    "The last name must have a maximum of 15 characters");
+            throw new PersonException("The last name must have a maximum of 15 characters");
         } else {
             this.lastName = lastName;
         }
