@@ -1,3 +1,5 @@
+package store;
+
 import java.util.ArrayList;
 
 //Systems Programming Course Project
