@@ -66,7 +66,7 @@ public class LinkedList<E> {
         E info = null;
         if(prev != null && prev.getNext() != null) {
             info = prev.getNext().getInfo();
-            prev.setNext(prev.getNext().getNext())
+            prev.setNext(prev.getNext().getNext());
             size--;
         }
         return info;
@@ -106,6 +106,7 @@ public class LinkedList<E> {
         return info;
     }
 
+    //search for a node with specific info inside
     public Node<E> searchNode(E info) {
         Node<E> node = null;
         Node<E> aux = first;
@@ -115,4 +116,78 @@ public class LinkedList<E> {
         }
         return node;
     }
+
+    //search the lastNode (grabs node w/ all attributes)
+    public Node<E> searchLastNode() {
+        Node<E> node = null;
+        Node<E> aux = first;
+        while(aux.getNext() != null) {
+            if(aux != null) {
+                aux = aux.getNext();
+            }
+        }
+        node = aux;
+        return node;
+    }
+
+    //get the node's info based on an input index
+    public E get(int index) {
+        E info = null;
+        if(index >= 0 && index < size()) {
+            Node<E> aux = first;
+            for(int i = 0; i < index && aux != null; i++) {
+                aux = aux.getNext();
+            }
+            info = aux.getInfo();
+        }
+        return info;
+    }
+
+    //find out the index of the node given a specific info
+    public int indexOf(E info) {
+        int index = -1; //return as is if not found (-1 equals some kind of error)
+        Node<E> aux = first;
+        int counter = 0;
+        //if the first node is not null (LL exists)
+        //and the info inside the node is different from the searched parameters
+        //re-loop while
+        while(aux != null && !aux.getInfo().equals(info)) {
+            if(aux.getInfo().equals(info)) {
+                counter++; //until found coincidence return position post-increment
+            }
+            aux = aux.getNext();
+        }
+        return counter;
+    }
+
+    //obtain the number of repeat content nodes
+    public int numOccurences(E info) {
+        Node<E> aux = first; //initialize our aux w/ baseline (root)
+        int counter = 0;
+        while(aux != null) {
+            if(aux.getInfo().equals(info)) {
+                counter++;
+            }
+            aux = aux.getNext();
+        }
+        return counter;
+    }
+
+    //toString method
+    public String toString() {
+        String result = "";
+        Node<E> aux = first; //baseline
+        //as long as the current node exists run while
+        while(aux != null) {
+            result = result + " " + aux.getInfo().toString();
+            aux = aux.getNext();
+        }
+        return result;
+    }
+
+    //print the toString values
+    public void print() {
+        System.out.println(toString());
+    }
+
 }
