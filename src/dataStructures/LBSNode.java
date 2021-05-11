@@ -59,10 +59,10 @@ public class LBSNode<E> {
 
     //toString method
     public String toString() {
-        String resultado = "";
+        String result = "";
         if (info != null) {
-            resultado = info.toString();
+            result = info.toString();
         }
-        return resultado;
+        return result;
     }
 }

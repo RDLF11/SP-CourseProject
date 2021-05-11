@@ -2,21 +2,29 @@ package dataStructures;
 
 public class LBSTree<E> implements BSTree<E> {
 
+    //Attributes
     private LBSNode<E> root;
 
+    //Constructors
+    //creates empty LBSTree
+    public LBSTree() {
+        this.root = null;
+    }
+
+    //Creates a new LBSTree by creating its root node
     public LBSTree(Comparable key, E info) {
         this.root = new LBSNode<E>(key, info, new LBSTree<E>(),
                 new LBSTree<E>());
     }
 
-    public LBSTree() {
-        this.root = null;
-    }
+    //Methods
 
+    //isEmpty makes sure the LBSTree exists
     public boolean isEmpty() {
         return (this.root == null);
     }
 
+    //Makes sure the LBSTree exists and returns the root's info
     public E getInfo() {
         if (!this.isEmpty()) {
             return this.root.getInfo();
@@ -24,6 +32,7 @@ public class LBSTree<E> implements BSTree<E> {
         return null;
     }
 
+    //Makes sure LBSTree exists and returns the root's content
     public Comparable getKey() {
         if (!this.isEmpty()) {
             return this.root.getKey();
@@ -31,6 +40,7 @@ public class LBSTree<E> implements BSTree<E> {
         return null;
     }
 
+    //gets the next node, left, below
     public BSTree<E> getLeft() {
         if (!this.isEmpty()) {
             return this.root.getLeft();
@@ -38,6 +48,7 @@ public class LBSTree<E> implements BSTree<E> {
         return null;
     }
 
+    //gets the next node, right, below
     public BSTree<E> getRight() {
         if (!this.isEmpty()) {
             return this.root.getRight();
@@ -45,6 +56,7 @@ public class LBSTree<E> implements BSTree<E> {
         return null;
     }
 
+    //Name the nodes of the tree in pre-order
     public String toStringPreOrder() {
         String treeStr = "";
         if (!this.isEmpty()) {
@@ -59,6 +71,7 @@ public class LBSTree<E> implements BSTree<E> {
         return treeStr;
     }
 
+    //Name the nodes of the tree in-order
     public String toStringInOrder() {
         String treeStr = "";
         if (!this.isEmpty()) {
@@ -73,6 +86,7 @@ public class LBSTree<E> implements BSTree<E> {
         return treeStr;
     }
 
+    //Name the nodes of the tree post-order
     public String toStringPostOrder() {
         String treeStr = "";
         if (!this.isEmpty()) {
@@ -87,10 +101,7 @@ public class LBSTree<E> implements BSTree<E> {
         return treeStr;
     }
 
-    public String toString() {
-        return this.toStringPreOrder();
-    }
-
+    //inserts a new node inside an LBSTree
     public void insert(Comparable key, E info) {
         if (this.isEmpty()) {
             this.root = new LBSNode<E>(key, info, new LBSTree<E>(),
@@ -110,6 +121,7 @@ public class LBSTree<E> implements BSTree<E> {
         }
     }
 
+    //search's the LBSTree by its key identifier
     @Override
     public BSTree<E> search(Comparable  key) {
         BSTree<E> searchedSubtree = null;
@@ -126,6 +138,11 @@ public class LBSTree<E> implements BSTree<E> {
             }
         } // if reaching an empty subtree -> key not found
         return searchedSubtree;
+    }
+
+    //toString returns in pre-order
+    public String toString() {
+        return this.toStringPreOrder();
     }
 
     public void print() {
