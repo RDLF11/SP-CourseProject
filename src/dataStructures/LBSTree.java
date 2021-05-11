@@ -13,8 +13,7 @@ public class LBSTree<E> implements BSTree<E> {
 
     //Creates a new LBSTree by creating its root node
     public LBSTree(Comparable key, E info) {
-        this.root = new LBSNode<E>(key, info, new LBSTree<E>(),
-                new LBSTree<E>());
+        this.root = new LBSNode<E>(key, info, new LBSTree<E>(), new LBSTree<E>());
     }
 
     //Methods
