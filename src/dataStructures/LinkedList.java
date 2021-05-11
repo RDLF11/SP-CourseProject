@@ -152,12 +152,14 @@ public class LinkedList<E> {
         //and the info inside the node is different from the searched parameters
         //re-loop while
         while(aux != null && !aux.getInfo().equals(info)) {
-            if(aux.getInfo().equals(info)) {
-                counter++; //until found coincidence return position post-increment
-            }
             aux = aux.getNext();
+            counter++; //until found coincidence return position post-increment
         }
-        return counter;
+        //if the next node is not empty the index shall be the counter (current count)
+        if(aux != null) {
+            index = counter;
+        }
+        return index;
     }
 
     //obtain the number of repeat content nodes
