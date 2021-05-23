@@ -1,3 +1,0 @@
-02|name-SP02|brand-02|f|true|kg|2|32.0|42.0|12345|name-Prv02|taxAddress-02|702345|first-C02|last-C02|C02@xxxx.com
-04|name-SP04|brand-04|f|true|kg|3|45.0|55.0|14567|name-Prv04|taxAddress-04|704567|first-C04|last-C04|C04@xxxx.com
-06|name-SP06|brand-06|f|true|kg|2|24.0|34.0|16789|name-Prv06|taxAddress-06|704567|first-C06|last-C06|C06@xxxx.com

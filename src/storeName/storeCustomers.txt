@@ -1,4 +1,0 @@
-501234|first-CL-1|last-CL1|cl1@xxxx.com
-502345|first-CL-2|last-CL2|cl2@xxxx.com
-503456|first-CL-3|last-CL3|cl3@xxxx.com
-504567|first-CL-4|last-CL4|cl4@xxxx.com

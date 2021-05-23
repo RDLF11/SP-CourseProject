@@ -1,4 +1,0 @@
-1234|namePrv1|taxAddress-1|501234|first-C1|last-C1|c1@xxxx.com
-2345|namePrv2|taxAddress-2|502345|first-C2|last-C2|c2@xxxx.com
-3456|namePrv3|taxAddress-3|503456|first-C3|last-C3|c3@xxxx.com
-4567|namePrv4|taxAddress-4|504567|first-C4|last-C4|c4@xxxx.com
