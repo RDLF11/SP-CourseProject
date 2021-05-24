@@ -14,7 +14,6 @@ public class Provider {
     private Person contactPerson; //contact person should be a person
 
     //Constructor
-        //For the time being we will use the default class constructor
     public Provider() {
         //TODO: stuff by default
     }
@@ -27,31 +26,32 @@ public class Provider {
     }
 
     //Methods - Getters and Setters
-    //Getters
     public int getVAT() {
         return VAT;
     }
-    public String getProviderName() {
-        return providerName;
-    }
-    public String getTaxAddress() {
-        return taxAddress;
-    }
-    public Person getContactPerson() {
-        return contactPerson;
-    }
-    //Setters
     public void setVAT(int VAT) {
         this.VAT = VAT;
+    }
+
+    public String getProviderName() {
+        return providerName;
     }
     public void setProviderName(String providerName) {
         this.providerName = providerName;
     }
+
+    public String getTaxAddress() {
+        return taxAddress;
+    }
     public void setTaxAddress(String taxAddress) {
         this.taxAddress = taxAddress;
+    }
+
+    public Person getContactPerson() {
+        return contactPerson;
     }
     public void setContactPerson(Person contactPerson) {
         this.contactPerson = contactPerson;
     }    
-    
+
 }

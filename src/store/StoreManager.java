@@ -10,19 +10,17 @@ import java.util.ArrayList;
 public class StoreManager {
 
     //StoreManager Attributes
-    private String storeName; //name of the store
-    private double stockCost;
-    private double stockBenefit;
+    private static String storeName; //name of the store
+    private static double stockCost;
+    private static double stockBenefit;
 
     //we should consider if this ArrayList is necessary
     private ArrayList <ProductList> stock;
 
-    //Empty constructor
-    public StoreManager() {
-        
-    }
+    //Empty constructor (We may also not declare it since it exits by default)
+    public StoreManager() {}
 
-    //Non empty consctrutor
+    //Non empty constructor
     public StoreManager(String storeName, double stockCost, double stockBenefit) {
         setStoreName(storeName);
         setStockCost(stockCost);
@@ -30,25 +28,26 @@ public class StoreManager {
     }
 
     //Methods - Getters and Setters
-    //Getters
-    public String getStoreName() {
+
+    public static String getStoreName() {
         return storeName;
     }
-    public double getStockCost() {
+    public void setStoreName(String storeName) {
+        StoreManager.storeName = storeName;
+    }
+
+    public void setStockCost(double stockCost) {
+        StoreManager.stockCost = stockCost;
+    }
+    public static double getStockCost() {
         return stockCost;
     }
-    public double getStockBenefit() {
-        return stockBenefit;
-    }
-    //Setters
-    public void setStoreName(String storeName) {
-        this.storeName = storeName;
-    }
-    public void setStockCost(double stockCost) {
-        this.stockCost = stockCost;
-    }
+
     public void setStockBenefit(double stockBenefit) {
-        this.stockBenefit = stockBenefit;
+        StoreManager.stockBenefit = stockBenefit;
+    }
+    public static double getStockBenefit() {
+        return stockBenefit;
     }
 
 }

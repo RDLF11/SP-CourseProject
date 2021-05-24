@@ -15,20 +15,17 @@ public abstract class RunApp {
         System.out.print("\033[H\033[2J");  
         System.out.flush();
             
-        //Eclipse way (primitive - print out 100 lines)
+        //Eclipse (primitive - print out 100 lines)
         //for( int i = 0 ; i < 100; i++ ) System.out.println();
     }
 
-    public static void main(String[] args) {
-        
-        //MainMenu must be shown
-
+    public static void mainMenu() {
         clear();
         
-        System.out.println("\t\t\t\t - Main Menu - ");
-        System.out.println("Store info: Store Name: " + getStoreName() +
-                           "Store cost: " + getProductCost() + 
-                           "Stock benefit: " + getProductBenefit());
+        System.out.println("\t - Main Menu - ");
+        System.out.println("Store info: Store Name: " + StoreManager.getStoreName() +
+                           "\nStore cost: " + StoreManager.getStockCost() + 
+                           "\nStock benefit: " + StoreManager.getStockBenefit());
 
         System.out.println("1 - Create Store\n" +
                            "2 - Manage Stock\n" +
@@ -41,7 +38,73 @@ public abstract class RunApp {
                            "9 - Testing\n" +
                            "0 - Exit the application");
 
-        System.out.println("Option>");
+        System.out.println("Option> ");
+    }
+
+    public static void menuSelection(String selection) {
+        switch(selection) {
+            case "1":
+                int one = 1;
+                StoreManagerMENU(one);
+            case "2":
+                int two = 2;
+                StoreManagerMENU(two);
+            case "3":
+                OrdersToProcessMENU();
+            case "4":
+                ProcessedOrdersMENU();
+            case "5":
+                ClientManagerMENU();
+            case "6":
+                ProviderManagerMENU();
+            case "7":
+                EmployeeManagerMENU();
+            case "8":
+                StoreInfoMENU();
+            case "9":
+                TestingSuiteMENU();
+            case "0":
+                System.exit(0); //Exit the application
+            default:
+                System.err.println("Please input a valid digit from 0-9");
+        }
+
+    }
+
+    private static void StoreManagerMENU(int identifier) {
+
+    }
+
+    private static void OrdersToProcessMENU() {
+
+    }
+
+    private static void ProcessedOrdersMENU() {
+
+    }
+
+    private static void ClientManagerMENU() {
+
+    }
+
+    private static void ProviderManagerMENU() {
+
+    }
+
+    private static void EmployeeManagerMENU() {
+
+    }
+
+    private static void StoreInfoMENU() {
+
+    }
+
+    private static void TestingSuiteMENU() {
+        
+    }
+
+    public static void main(String[] args) {
+        mainMenu();
     }
     
 }

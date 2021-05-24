@@ -18,40 +18,51 @@ public class StockableProduct extends Product {
         private double costPerUnit;
         private double pricePerUnit;
 
-    //Constructor
-        //For the time being we will use the default class constructor
+    //Constructors
+    //For the time being we will use the default class constructor
     public StockableProduct() {
 
         productID_counter++;
-        this.productID = productID_counter;
-
+        setProductID(productID);
     }
-    //Variable Constructor 
-
     public StockableProduct(int numUnits,double costPerUnit, double pricePerUnit){
-        setnumUnits(numUnits);
-        setcostPerUnit(costPerUnit);
-        setpricePerUnit(pricePerUnit);
+
+        productID_counter++;
+        setProductID(productID);
+
+        setNumUnits(numUnits);
+        setCostPerUnit(costPerUnit);
+        setPricePerUnit(pricePerUnit);
     }
 
     //Methods
-    //Getters
-        //since we might need this ID later to either locate it or modify it.
-    public int productID(){
+    //Getters and Setters
+    //since we might need this ID later to either locate it or modify it.
+    public int getProductID(){
         return productID;
     }
+    public void setProductID(int productID) {
+        this.productID = productID;
+    }
 
-    //Setters
-        //we create a set() method for this 3 variables since theres a empty constructor.
-    public void setnumUnits(int numUnits){
+    public int getNumUnits() {
+        return numUnits;
+    }
+    public void setNumUnits(int numUnits){
         this.numUnits = numUnits;
     }
 
-    public void setcostPerUnit(double costPerUnit){
+    public double getCostPerUnit() {
+        return costPerUnit;
+    }
+    public void setCostPerUnit(double costPerUnit){
         this.costPerUnit = costPerUnit;
     }
 
-    public void setpricePerUnit(double pricePerUnit){
+    public double getPricePerUnit() {
+        return pricePerUnit;
+    }
+    public void setPricePerUnit(double pricePerUnit){
         this.pricePerUnit = pricePerUnit;
     }
 

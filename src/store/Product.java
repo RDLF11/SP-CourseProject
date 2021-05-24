@@ -11,50 +11,50 @@ public class Product {
     private String productName;
     private String productBrand;
 
-
     private char category;
         //we need 4 final char categories:
-        static final char Food = 'f';
-        static final char Supplies = 's';
-        static final char Equipment = 'e';
-        static final char Miscellany = 'm';
+        static final char FOOD = 'f';
+        static final char SUPPLIES = 's';
+        static final char EQUIPMENT = 'e';
+        static final char MISCELLANY = 'm';
 
     private boolean isCountable;
     private String measurementUnit; //kg, litres, pieces...
 
-    //Constructor
-        //For the time being we will use the default class constructor
+    //Constructors
     public Product() {
 
     }
-
     public Product(String productName, String productBrand) {
         setProductName(productName);
         setProductBrand(productBrand);
     }
 
     //Methods - Getters and Setters
-    //Getters
-    public char getCategory() {
-        return category;
-    }
     public String getProductName() {
         return productName;
+    }
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    public void setProductBrand(String productBrand) {
+        this.productBrand = productBrand;
     }
     public String getProductBrand() {
         return productBrand;
     }
-    //Setters
 
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-    public void setProductBrand(String productBrand) {
-        this.productBrand = productBrand;
+    public char getCategory() {
+        return category;
     }
     public void setCategory(char category) {
-        this.category = category;
+        if (category == 'f' || category == 's' || category == 'e' || category == 'm') {
+            this.category = category;
+        } else {
+            System.err.println("Please input a valid category ('f', 's', 'e' or 'm')");
     }
+
     //set method
     public void set(String[] productData) {
         try {
