@@ -1,5 +1,8 @@
 package store;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 //Systems Programming Course Project
 //Rodrigo De Lama - 100451775@alumnos.uc3m.es - @RDLF11
 //Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
@@ -19,15 +22,12 @@ public class Order extends ProductList {
 
     //Constructors
     public Order() {
-        //Cannot use getters on a super attribute inheritance
-        //super(list, getTotalCost(), getTotalPrice(), getTotalBenefit());
-        super(list, totalCost, totalPrice, totalBenefit);
-
         //Always increment the orderID counter
         orderID_counter++;
         serOrderID(orderID);
     }
-    public Order(Person client, Person employee) {
+    public Order(ArrayList<StockableProduct> list, double totalCost, double totalPrice, double totalBenefit, Person client, Person employee) {
+        super(list, totalCost, totalPrice, totalBenefit);
         
         //All orderIDs must be tracked
         orderID_counter++;
@@ -63,4 +63,21 @@ public class Order extends ProductList {
         return super.toString() + "\\|" + orderID + "\\|" + client + "\\|" + employee + "\n";
     }
 
+    public void print() {
+    }
+
+    public void writeToFile() {
+    }
+
+    //Read from standard input (keyboard input)
+    public Order readKeyboard() {
+        Scanner keyboardInput = new Scanner(System.in);
+        String input = keyboardInput.next()
+        return (Order) input;
+    }
+    //Read from a file with the format of each object in each line
+    public Order readFile(String File){
+        Scanner fileInput = new Scanner(File);
+        return 
+    }
 }

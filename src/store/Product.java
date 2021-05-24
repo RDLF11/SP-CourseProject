@@ -83,4 +83,13 @@ public class Product {
     public String toString() {
         return productName + "\\|" + productBrand;
     }
+
+    public void print() {
+
+    }
+
+    public void writeToFile() {
+        
+    }
+    
 }

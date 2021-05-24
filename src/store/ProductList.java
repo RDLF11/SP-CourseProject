@@ -60,4 +60,12 @@ public class ProductList {
     public String toString() {
         return list + "\\|" + totalCost + "\\|" + totalPrice + "\\|" + totalBenefit;
     }
+
+    public void print() {
+
+    }
+
+    public void writeToFile() {
+        
+    }
 }
