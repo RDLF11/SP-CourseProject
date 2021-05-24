@@ -107,13 +107,13 @@ public class Person {
         Person result = new Person();
         try {
             Scanner userInput = new Scanner(System.in);
-            System.out.print("Id:");
+                System.out.print("Id: ");
             result.setId(Integer.parseInt(userInput.next()));
-            System.out.print("First Name:");
+                System.out.print("First Name: ");
             result.setFirstName(userInput.next());
-            System.out.print("Last Name:");
+                System.out.print("Last Name: ");
             result.setLastName(userInput.next());
-            System.out.print("email:");
+                System.out.print("email: ");
             result.setEmail(userInput.next());
             userInput.close();
         } catch (PersonException pe) {

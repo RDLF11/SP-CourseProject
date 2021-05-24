@@ -71,9 +71,27 @@ public class Order extends ProductList {
 
     //Read from standard input (keyboard input)
     public Order readKeyboard() {
-        Scanner keyboardInput = new Scanner(System.in);
-        String input = keyboardInput.next()
-        return (Order) input;
+        System.out.println("Setting new Person");
+        Person result = new Person();
+        try {
+            Scanner userInput = new Scanner(System.in);
+
+            System.out.println("Input the client details\n");
+            System.out.print("First Name: ");
+                result.setFirstName(userInput.next());
+            System.out.print("Last Name: ");
+                result.setLastName(userInput.next());
+            System.out.print("email: ");
+                result.setEmail(userInput.next());
+
+            System.out.println("Input the employee details\n");
+            
+        userInput.close();
+        } catch (PersonException pe) {
+            pe.printStackTrace();
+            System.exit(1);
+        }
+        return result;
     }
     //Read from a file with the format of each object in each line
     public Order readFile(String File){

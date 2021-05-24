@@ -17,7 +17,7 @@ public class Product {
         static final char EQUIPMENT = 'e';
         static final char MISCELLANY = 'm';
     private boolean isCountable;
-    private String measurementUnit; //kg, litres, pieces...
+    private String measurementUnits; //kg, litres, pieces...
 
     //Constructors
     public Product() {
@@ -61,27 +61,29 @@ public class Product {
     }
 
     public String getMeasurementUnit() {
-        return measurementUnit;
+        return measurementUnits;
     }
-    public void setMeasurementUnit(String measurementUnit) {
-        this.measurementUnit = measurementUnit;
+    public void setMeasurementUnit(String measurementUnits) {
+        this.measurementUnits = measurementUnits;
     }
 
     //set method
     public void set(String[] productData) {
-        //try {
-        setProductName(productData[0]);
-        setProductBrand(productData[1]);
-        String category = productData[2];
-        setCategory( category.charAt(0)); //turn string to char
-        //} catch (ProductException pe) {
-        //    pe.printStackTrace();
-        //    System.exit(1);
-        //}
+        try {
+            setProductName(productData[0]);
+            setProductBrand(productData[1]);
+
+            //turn string to char
+            String category = productData[2];
+            setCategory(category.charAt(0));
+        } catch (ProductException prod) {
+            prod.printStackTrace();
+            System.exit(1);
+        }
     }
 
     public String toString() {
-        return productName + "\\|" + productBrand;
+        return productName + "\\|" + productBrand + "\\|" + category + "\\|" + isCountable + "\\|" + measurementUnits;
     }
 
     //Print to screen the 

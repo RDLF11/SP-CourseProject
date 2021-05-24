@@ -17,6 +17,7 @@ public class StockableProduct extends Product {
         private int numUnits;
         private double costPerUnit;
         private double pricePerUnit;
+        private Provider provider;
 
     //Constructors
     //For the time being we will use the default class constructor
@@ -25,7 +26,8 @@ public class StockableProduct extends Product {
         productID_counter++;
         setProductID(productID);
     }
-    public StockableProduct(String productName, String productBrand, int numUnits,double costPerUnit, double pricePerUnit){
+    public StockableProduct(String productName, String productBrand, int numUnits,
+                            double costPerUnit, double pricePerUnit, Provider provider){
         super(productName, productBrand);
 
         productID_counter++;
@@ -34,6 +36,7 @@ public class StockableProduct extends Product {
         setNumUnits(numUnits);
         setCostPerUnit(costPerUnit);
         setPricePerUnit(pricePerUnit);
+        setProvider(provider);
     }
 
     //Methods
@@ -67,8 +70,20 @@ public class StockableProduct extends Product {
         this.pricePerUnit = pricePerUnit;
     }
 
+    public Provider getProvider() {
+        return provider;
+    }
+    public void setProvider(Provider provider) {
+        this.provider = provider;
+    }
+
     public String toString() {
-        return super.toString() + "\\|" + numUnits + "\\|" + costPerUnit + "\\|" + pricePerUnit + "\n";
+        return super.toString() + "\\|" + numUnits + "\\|" + costPerUnit + "\\|" + pricePerUnit + "\\|" +
+                //Part 2 Modifications
+                provider.getProviderName() + "\\|" + provider.getTaxAddress() + "\\|" +
+                provider.getContactPerson().getId() + "\\|" +
+                provider.getContactPerson().getFirstName() + "\\|" + provider.getContactPerson().getLastName() + "\\|" +
+                provider.getContactPerson().getEmail();
     }
 
 }
