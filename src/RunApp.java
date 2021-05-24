@@ -1,4 +1,4 @@
-package store;
+import store.StoreManager;
 
 //Systems Programming Course Project
 //Rodrigo De Lama - 100451775@alumnos.uc3m.es - @RDLF11
