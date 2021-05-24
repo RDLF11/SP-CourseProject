@@ -84,12 +84,12 @@ public class Product {
         return productName + "\\|" + productBrand;
     }
 
+    //Print to screen the 
     public void print() {
-
     }
 
     public void writeToFile() {
         
     }
-    
+
 }
