@@ -11,16 +11,15 @@ public class ProductList {
 
     //ProductList Attributes
     //declare static and friendly for Order.java constructor to be able to utilise them
-    static ArrayList<StockableProduct> list = new ArrayList<StockableProduct>(); //changed list from string to ArrayList
-    static double totalCost;
-    static double totalPrice;
-    static double totalBenefit;
+    private ArrayList<StockableProduct> list = new ArrayList<StockableProduct>(); //changed list from string to ArrayList
+    private double totalCost;
+    private double totalPrice;
+    private double totalBenefit;
 
     //Constructors
+    //to be able to inherit attributes we need a standard empty constructor
     public ProductList() {
-        
     }
-    //to be able to inherit attributes we need an initial constructor
     public ProductList(ArrayList<StockableProduct> list, double totalCost, double totalPrice, double totalBenefit) {
         setList(list);
         setTotalCost(totalCost);
@@ -29,32 +28,36 @@ public class ProductList {
     }
 
     //Methods - Getters and Setters
-    //Getters
     public ArrayList<StockableProduct> getList() {
         return list;
     }
+    public void setList(ArrayList<StockableProduct> list) {
+        this.list = list;
+    //if the objects were static, we must access them differently --> class.attribute = inputAttribute
+    }
+
     public double getTotalCost() {
         return totalCost;
     }
+    public void setTotalCost(double totalCost) {
+        this.totalCost = totalCost;
+    }
+
     public double getTotalPrice() {
         return totalPrice;
     }
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
     public double getTotalBenefit() {
         return totalBenefit;
     }
-    //Setters - to be potentially used in Order.java
-    public void setList(ArrayList<StockableProduct> list) {
-        ProductList.list = list;
-        //since they are static, we must access them differently
-    }
-    public void setTotalCost(double totalCost) {
-        ProductList.totalCost = totalCost;
-    }
-    public void setTotalPrice(double totalPrice) {
-        ProductList.totalPrice = totalPrice;
-    }
     public void setTotalBenefit(double totalBenefit) {
-        ProductList.totalBenefit = totalBenefit;
+        this.totalBenefit = totalBenefit;
     }
 
+    public String toString() {
+        return list + "\\|" + totalCost + "\\|" + totalPrice + "\\|" + totalBenefit;
+    }
 }

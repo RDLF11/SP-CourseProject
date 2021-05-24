@@ -95,7 +95,7 @@ public class Person {
 
     //Person toString method
     public String toString() {
-        return id + "|" + firstName + "|" + lastName + "|" + email + "\n";
+        return id + "\\|" + firstName + "\\|" + lastName + "\\|" + email + "\n";
     }
 
     public void print() {

@@ -12,11 +12,12 @@ public class Order extends ProductList {
     //Order Attributes
     private int orderID;
     private static int orderID_counter; //aux value
-    //clients and employees should be objects of class Person
+
+    //clients and employees shall be objects of class Person
     private Person client;
     private Person employee;
 
-    //Order Constructors
+    //Constructors
     public Order() {
         //Cannot use getters on a super attribute inheritance
         //super(list, getTotalCost(), getTotalPrice(), getTotalBenefit());
@@ -24,14 +25,13 @@ public class Order extends ProductList {
 
         //Always increment the orderID counter
         orderID_counter++;
-        this.orderID = orderID_counter;
-
+        serOrderID(orderID);
     }
     public Order(Person client, Person employee) {
         
         //All orderIDs must be tracked
         orderID_counter++;
-        this.orderID = orderID_counter;
+        serOrderID(orderID);
 
         setEmployee(employee);
         setClient(client);
@@ -40,6 +40,9 @@ public class Order extends ProductList {
     //Methods - Getters and Setters
     public int getOrderID() {
         return orderID;
+    }
+    public void serOrderID(int orderID) {
+        this.orderID = orderID;
     }
 
     public Person getClient() {
@@ -57,7 +60,7 @@ public class Order extends ProductList {
     }
 
     public String toString() {
-        return orderID + "|" + client + "|" + employee + "\n";
+        return super.toString() + "\\|" + orderID + "\\|" + client + "\\|" + employee + "\n";
     }
 
 }

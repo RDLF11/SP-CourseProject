@@ -68,7 +68,7 @@ public class StockableProduct extends Product {
     }
 
     public String toString() {
-        return super.toString() + numUnits + "|" + costPerUnit + "|" + pricePerUnit + "\n";
+        return super.toString() + "\\|" + numUnits + "\\|" + costPerUnit + "\\|" + pricePerUnit + "\n";
     }
 
 }

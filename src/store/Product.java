@@ -81,6 +81,6 @@ public class Product {
     }
 
     public String toString() {
-        return productName + "|" + productBrand;
+        return productName + "\\|" + productBrand;
     }
 }

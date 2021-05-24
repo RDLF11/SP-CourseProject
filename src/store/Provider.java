@@ -54,6 +54,6 @@ public class Provider {
     }    
 
     public String toString() {
-        return VAT + "|" + providerName + "|" + taxAddress + "|" + contactPerson + "\n";
+        return VAT + "\\|" + providerName + "\\|" + taxAddress + "\\|" + contactPerson + "\n";
     }
 }
