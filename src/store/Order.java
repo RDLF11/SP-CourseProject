@@ -38,23 +38,26 @@ public class Order extends ProductList {
     }
 
     //Methods - Getters and Setters
-    //Getters
     public int getOrderID() {
         return orderID;
     }
+
     public Person getClient() {
         return client;
+    }
+    public void setClient(Person client) {
+        this.client = client;
+    }
+
+    public void setEmployee(Person employee) {
+        this.employee = employee;
     }
     public Person getEmployee() {
         return employee;
     }
-    //Setters
-    public void setClient(Person client) {
-        this.client = client;
-    }
-    public void setEmployee(Person employee) {
-        this.employee = employee;
-    }
 
+    public String toString() {
+        return orderID + "|" + client + "|" + employee + "\n";
+    }
 
 }

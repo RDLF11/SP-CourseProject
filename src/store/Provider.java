@@ -13,9 +13,8 @@ public class Provider {
     private String taxAddress;
     private Person contactPerson; //contact person should be a person
 
-    //Constructor
+    //Constructors
     public Provider() {
-        //TODO: stuff by default
     }
     public Provider(int VAT, String providerName, String taxAddress, Person contactPerson) {
         //Deprecated this. assignments for setters
@@ -54,4 +53,7 @@ public class Provider {
         this.contactPerson = contactPerson;
     }    
 
+    public String toString() {
+        return VAT + "|" + providerName + "|" + taxAddress + "|" + contactPerson + "\n";
+    }
 }

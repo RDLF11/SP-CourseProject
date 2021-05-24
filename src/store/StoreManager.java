@@ -50,4 +50,7 @@ public class StoreManager {
         return stockBenefit;
     }
 
+    public String toString() {
+        return storeName + "|" + stockCost + "|" + stockBenefit + "\n";
+    }
 }

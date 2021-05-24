@@ -44,7 +44,8 @@ public class ProductList {
     }
     //Setters - to be potentially used in Order.java
     public void setList(ArrayList<StockableProduct> list) {
-        ProductList.list = list; //since they are static, we must access them differently
+        ProductList.list = list;
+        //since they are static, we must access them differently
     }
     public void setTotalCost(double totalCost) {
         ProductList.totalCost = totalCost;

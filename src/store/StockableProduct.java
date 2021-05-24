@@ -21,11 +21,12 @@ public class StockableProduct extends Product {
     //Constructors
     //For the time being we will use the default class constructor
     public StockableProduct() {
-
+        
         productID_counter++;
         setProductID(productID);
     }
-    public StockableProduct(int numUnits,double costPerUnit, double pricePerUnit){
+    public StockableProduct(String productName, String productBrand, int numUnits,double costPerUnit, double pricePerUnit){
+        super(productName, productBrand);
 
         productID_counter++;
         setProductID(productID);
@@ -64,6 +65,10 @@ public class StockableProduct extends Product {
     }
     public void setPricePerUnit(double pricePerUnit){
         this.pricePerUnit = pricePerUnit;
+    }
+
+    public String toString() {
+        return super.toString() + numUnits + "|" + costPerUnit + "|" + pricePerUnit + "\n";
     }
 
 }

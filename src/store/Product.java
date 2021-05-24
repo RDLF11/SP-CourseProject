@@ -10,14 +10,12 @@ public class Product {
     //Product Attributes
     private String productName;
     private String productBrand;
-
     private char category;
         //we need 4 final char categories:
         static final char FOOD = 'f';
         static final char SUPPLIES = 's';
         static final char EQUIPMENT = 'e';
         static final char MISCELLANY = 'm';
-
     private boolean isCountable;
     private String measurementUnit; //kg, litres, pieces...
 
@@ -55,16 +53,34 @@ public class Product {
             System.err.println("Please input a valid category ('f', 's', 'e' or 'm')");
     }
 
-    //set method
-    public void set(String[] productData) {
-        try {
-            setProductName(productData[0]);
-            setProductBrand(productData[1]);
-            //setCategory(.valueOf(productData[2])); turn string to char
-        } catch (ProductException pe) {
-            pe.printStackTrace();
-            System.exit(1);
-        }
+    public boolean getIsCountable() {
+        return isCountable;
+    }
+    public void setIsCountable(boolean isCountable) {
+        this.isCountable = isCountable;
     }
 
+    public String getMeasurementUnit() {
+        return measurementUnit;
+    }
+    public void setMeasurementUnit(String measurementUnit) {
+        this.measurementUnit = measurementUnit;
+    }
+
+    //set method
+    public void set(String[] productData) {
+        //try {
+        setProductName(productData[0]);
+        setProductBrand(productData[1]);
+        String category = productData[2];
+        setCategory( category.charAt(0)); //turn string to char
+        //} catch (ProductException pe) {
+        //    pe.printStackTrace();
+        //    System.exit(1);
+        //}
+    }
+
+    public String toString() {
+        return productName + "|" + productBrand;
+    }
 }
