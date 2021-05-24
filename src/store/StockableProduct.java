@@ -7,7 +7,7 @@ import java.util.ArrayList;
 //Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
 //Manuel Morales - 100451690@alumnos.uc3m.es - @ikaoseu
 
-public class StockableProduct extends Product {
+public class StockableProduct extends Product implements Comparable<StockableProduct> {
 
     //StockableProduct Attributes
         //We must inherit all previous attributes
@@ -84,6 +84,25 @@ public class StockableProduct extends Product {
                 provider.getContactPerson().getId() + "\\|" +
                 provider.getContactPerson().getFirstName() + "\\|" + provider.getContactPerson().getLastName() + "\\|" +
                 provider.getContactPerson().getEmail();
+    }
+
+    public boolean equals(StockableProduct b) {
+        //Check if two providers are equal based on their VAT no
+        //returns a boolean
+        if (a != b.getProductID()) return false;
+        return true;
+    }
+    @Override
+    public int compareTo(StockableProduct otherProductID) {
+        try {
+            //product = (Provider) product; //Explicit casting from object to Provider
+            //TODO
+            //Compares a provider object to another and returns a 0, -1 or 1
+        } catch (ClassCastException e) {
+            System.err.println("Please input a Provider into this comparable");
+        }
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

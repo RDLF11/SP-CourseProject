@@ -8,7 +8,7 @@ import java.io.*;
 //Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
 //Manuel Morales - 100451690@alumnos.uc3m.es - @ikaoseu
 
-public class Person {
+public class Person implements Comparable {
 
     //Person Attributes
     private int id;
@@ -19,7 +19,7 @@ public class Person {
     //Person Constructor
     public Person(int id, String firstName, String lastName, String email) {
         try {
-            setId(id);
+            setID(id);
             setFirstName(firstName);
             setLastName(lastName);
             setEmail(email);
@@ -39,7 +39,7 @@ public class Person {
     
     //Methods
     //Getters return private variables on demand
-    public int getId() {
+    public int getID() {
         return id;
     }
     
@@ -77,13 +77,13 @@ public class Person {
         this.email = email;
     }
 
-    public void setId(int id) {
+    public void setID(int id) {
         this.id = id;
     }
 
     public void set(String[] personData) {
         try {
-            setId(Integer.parseInt(personData[0]));
+            setID(Integer.parseInt(personData[0]));
             setFirstName(personData[1]);
             setLastName(personData[2]);
             setEmail(personData[3]);
@@ -108,7 +108,7 @@ public class Person {
         try {
             Scanner userInput = new Scanner(System.in);
                 System.out.print("Id: ");
-            result.setId(Integer.parseInt(userInput.next()));
+            result.setID(Integer.parseInt(userInput.next()));
                 System.out.print("First Name: ");
             result.setFirstName(userInput.next());
                 System.out.print("Last Name: ");
@@ -157,6 +157,32 @@ public class Person {
             ioe.printStackTrace(); // to debug
             System.exit(1);
         }
+    }
+
+    @Override
+    public int compareTo(Object anotherPerson) {
+
+        try {
+            //NOT NEEDED
+            //VAT = (Provider) VAT; //Explicit casting from object to Provider
+            //VSCode states: Comparable is a raw type. References to generic type Comparable<T> should be parameterized Java(16777788)
+
+            //Compares a provider object to another and returns a 0, -1 or 1
+            if (anotherPerson != null) {
+                if (id.compareTo(anotherPerson.getID()) < 0) {
+                    return -1;
+                } else if (id.compareTo(anotherPerson.getID()) > 0) {
+                    return 1;
+                } else {
+                    return 0;
+                }
+            }
+            return -1;
+            
+        } catch (ClassCastException e) {
+            System.err.println("Please input a Provider into this comparable");
+        }
+        
     }
 
 }

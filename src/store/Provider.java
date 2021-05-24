@@ -5,7 +5,7 @@ package store;
 //Jaime Mato - 100451639@alumnos.uc3m.es - @Pekeniojimi
 //Manuel Morales - 100451690@alumnos.uc3m.es - @ikaoseu
 
-public class Provider {
+public class Provider implements Comparable<Provider> {
 
     //Provider Attributes
     private int VAT;
@@ -56,4 +56,30 @@ public class Provider {
     public String toString() {
         return VAT + "\\|" + providerName + "\\|" + taxAddress + "\\|" + contactPerson + "\n";
     }
+
+    public boolean equals(Provider b) {
+        //Check if two providers are equal based on their VAT no
+        //returns a boolean
+        if (a != b.getVAT()) return false;
+        return true;
+    }
+    @Override
+    public int compareTo(Provider otherVAT) {
+        
+        /*
+        try {
+            //NOT NEEDED
+            //VAT = (Provider) VAT; //Explicit casting from object to Provider
+            //VSCode states: Comparable is a raw type. References to generic type Comparable<T> should be parameterized Java(16777788)
+
+            //TOD O
+            //Compares a provider object to another and returns a 0, -1 or 1
+        } catch (ClassCastException e) {
+            System.err.println("Please input a Provider into this comparable");
+        }
+        */
+        
+        return 0;
+    }
+
 }
