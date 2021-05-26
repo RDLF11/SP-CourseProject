@@ -32,7 +32,7 @@ public class StoreManager {
     public static String getStoreName() {
         return storeName;
     }
-    public void setStoreName(String storeName) {
+    public static void setStoreName(String storeName) {
         StoreManager.storeName = storeName;
     }
 

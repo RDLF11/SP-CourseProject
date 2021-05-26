@@ -7,6 +7,10 @@ import store.StoreManager;
 //Manuel Morales - 100451690@alumnos.uc3m.es - @ikaoseu
 
 public abstract class RunApp {
+
+    //static scanner and input var for global referencing across RunApp file
+    static Scanner userInput = new Scanner(System.in);
+    static String input = userInput.next();
     
     //Clear console
     public static void clear() {
@@ -45,11 +49,9 @@ public abstract class RunApp {
     public static void menuSelection(String selection) {
         switch(selection) {
             case "1":
-                int one = 1;
-                StoreManagerMENU(one);
+                CreateStoreMENU();
             case "2":
-                int two = 2;
-                StoreManagerMENU(two);
+                StoreManagerMENU();
             case "3":
                 OrdersToProcessMENU();
             case "4":
@@ -72,8 +74,24 @@ public abstract class RunApp {
 
     }
 
-    private static void StoreManagerMENU(int identifier) {
+    private static void CreateStoreMENU() {
+        System.out.println("\t - Store Creation Menu - ");
+        System.out.println("What would you like to name the store?: " + input);
+        StoreManager.setStoreName(input);
 
+    }
+
+    private static void StoreManagerMENU() {
+        System.out.println("\t - Stock Management Menu - ");
+        System.out.println("Store info: Store Name: " + StoreManager.getStoreName() +
+                           "\nStore cost: " + StoreManager.getStockCost() + 
+                           "\nStock benefit: " + StoreManager.getStockBenefit());
+
+        System.out.println("1 - Insert Stock\n" +
+                           "2 - Remove Stock\n" +
+                           "3 - Modify Stock\n" +
+                           "4 - Search Stock\n" +
+                           "0 - Exit the application\n");
     }
 
     private static void OrdersToProcessMENU() {
@@ -107,12 +125,12 @@ public abstract class RunApp {
     public static void main(String[] args) {
         mainMenu();
 
-        Scanner userInput = new Scanner(System.in);
+
 
             String input = userInput.next();
             menuSelection(input);
 
-        userInput.close();
+        
     }
-    
+
 }
