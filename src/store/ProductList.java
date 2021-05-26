@@ -14,7 +14,7 @@ public class ProductList {
     private ArrayList<StockableProduct> list = new ArrayList<StockableProduct>(); //changed list from string to ArrayList
     private double totalCost;
     private double totalPrice;
-    private double totalBenefit;
+    private double totalBenefit = totalPrice - totalCost;
 
     //Constructors
     //to be able to inherit attributes we need a standard empty constructor
@@ -36,6 +36,7 @@ public class ProductList {
     //if the objects were static, we must access them differently --> class.attribute = inputAttribute
     }
 
+    //Product cost
     public double getTotalCost() {
         return totalCost;
     }
@@ -43,6 +44,7 @@ public class ProductList {
         this.totalCost = totalCost;
     }
 
+    //customer price
     public double getTotalPrice() {
         return totalPrice;
     }
@@ -50,6 +52,7 @@ public class ProductList {
         this.totalPrice = totalPrice;
     }
 
+    //benefit for the store
     public double getTotalBenefit() {
         return totalBenefit;
     }
@@ -57,6 +60,7 @@ public class ProductList {
         this.totalBenefit = totalBenefit;
     }
 
+    //toString method
     public String toString() {
         return list + "\\|" + totalCost + "\\|" + totalPrice + "\\|" + totalBenefit;
     }

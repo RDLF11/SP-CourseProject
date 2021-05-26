@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import store.StoreManager;
 
 //Systems Programming Course Project
@@ -36,9 +37,9 @@ public abstract class RunApp {
                            "7 - Manage Employees\n" +
                            "8 - Print Store Info\n" +
                            "9 - Testing\n" +
-                           "0 - Exit the application");
+                           "0 - Exit the application\n");
 
-        System.out.println("Option> ");
+        System.out.print("Option> ");
     }
 
     public static void menuSelection(String selection) {
@@ -105,6 +106,13 @@ public abstract class RunApp {
 
     public static void main(String[] args) {
         mainMenu();
+
+        Scanner userInput = new Scanner(System.in);
+
+            String input = userInput.next();
+            menuSelection(input);
+
+        userInput.close();
     }
     
 }

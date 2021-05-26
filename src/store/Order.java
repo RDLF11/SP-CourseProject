@@ -45,6 +45,7 @@ public class Order extends ProductList {
         this.orderID = orderID;
     }
 
+    //client identification
     public Person getClient() {
         return client;
     }
@@ -52,6 +53,7 @@ public class Order extends ProductList {
         this.client = client;
     }
 
+    //employee identification
     public void setEmployee(Person employee) {
         this.employee = employee;
     }
@@ -59,6 +61,7 @@ public class Order extends ProductList {
         return employee;
     }
 
+    //toString
     public String toString() {
         return super.toString() + "\\|" + orderID + "\\|" + client + "\\|" + employee + "\n";
     }
@@ -91,6 +94,7 @@ public class Order extends ProductList {
             pe.printStackTrace();
             System.exit(1);
         }
+        
         return result;
     }
     //Read from a file with the format of each object in each line
